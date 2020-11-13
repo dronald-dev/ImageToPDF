@@ -57,6 +57,6 @@
       <Button fx:id="buttonClear" layoutX="15.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Clear" />
       <Button fx:id="buttonSave" layoutX="506.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Save" />
       <ProgressBar fx:id="progressBar" layoutX="200.0" layoutY="364.0" prefHeight="18.0" prefWidth="200.0" progress="0.0" />
-      <Label fx:id="labelProgress" alignment="CENTER" layoutX="112.0" layoutY="384.0" prefHeight="17.0" prefWidth="370.0" text="hrtrhrthrhrth" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" />
+      <Label fx:id="labelProgress" alignment="CENTER" layoutX="112.0" layoutY="384.0" prefHeight="17.0" prefWidth="370.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" />
    </children>
 </AnchorPane>

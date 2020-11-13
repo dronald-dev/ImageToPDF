@@ -5,11 +5,30 @@ plugins {
 group 'ua.dronald'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = "1.8"
+
 repositories {
     mavenCentral()
 }
 
+configurations {
+    extraLibs
+}
+
 dependencies {
     compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.2'
+    extraLibs group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.2'
     //testCompile group: 'junit', name: 'junit', version: '4.12'
+    configurations.compile.extendsFrom(configurations.extraLibs)
+}
+
+jar {
+    from {
+        configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes(
+                'Main-Class': 'ua.dronald.imagetopdf.ImageToPDF'
+        )
+    }
 }

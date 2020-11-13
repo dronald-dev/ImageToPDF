@@ -13,7 +13,7 @@ public class ImageToPDF extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/ImageToPDF.fxml"));
+        Parent root = FXMLLoader.load(ImageToPDF.class.getResource("/ImageToPDF.fxml"));
         Scene scene = new Scene(root);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setTitle("Image To PDF");
